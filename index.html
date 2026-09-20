@@ -47,7 +47,7 @@
     color: var(--white);
     padding: 32px 44px 28px;
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 1fr 100px;
     gap: 24px;
     align-items: end;
   }
@@ -66,7 +66,6 @@
     font-size: 25px;
     line-height: 1.22;
     font-weight: 400;
-    max-width: 560px;
     color: var(--white);
   }
 
@@ -79,7 +78,6 @@
     margin-top: 12px;
     font-size: 12.5px;
     color: rgba(255,255,255,0.7);
-    max-width: 500px;
     line-height: 1.55;
   }
 
@@ -102,7 +100,7 @@
     padding: 5px;
   }
 
-  .qr-box svg { width: 80px; height: 80px; }
+  .qr-box svg, .qr-box img, .qr-box canvas { width: 80px !important; height: 80px !important; }
 
   .qr-label {
     font-size: 10px;
@@ -115,10 +113,10 @@
   .challenges {
     background: var(--teal);
     color: var(--white);
-    padding: 16px 44px;
+    padding: 14px 44px;
     display: flex;
+    flex-direction: column;
     gap: 0;
-    align-items: stretch;
   }
 
   .challenges-label {
@@ -127,10 +125,8 @@
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: rgba(255,255,255,0.55);
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
-    margin-right: 20px;
-    flex-shrink: 0;
+    margin-bottom: 10px;
+    display: block;
   }
 
   .challenge-items {
@@ -368,18 +364,10 @@
   }
 
   .footer-avatar {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: var(--teal);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'DM Serif Display', serif;
-    font-size: 17px;
-    color: var(--white);
+    height: 36px;
+    width: auto;
     flex-shrink: 0;
-    border: 2px solid rgba(255,255,255,0.18);
+    object-fit: contain;
   }
 
   .footer-name {
@@ -483,7 +471,7 @@
     .df-badge { font-size: 7.5px; padding: 1px 6px; }
 
     .footer { padding: 10px 24px; }
-    .footer-avatar { width: 32px; height: 32px; font-size: 14px; }
+    .footer-avatar { height: 28px; }
     .footer-name { font-size: 10.5px; }
     .footer-title { font-size: 9px; }
     .footer-contact { font-size: 9px; gap: 7px; }
@@ -548,49 +536,7 @@
   </div>
   <div class="qr-block">
     <div class="qr-box">
-      <!-- Replace this SVG with a real QR code pointing to your GitHub Pages URL -->
-      <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
-        <rect width="80" height="80" fill="white"/>
-        <!-- Top-left finder -->
-        <rect x="2" y="2" width="26" height="26" rx="2" fill="none" stroke="#0B1F3A" stroke-width="3"/>
-        <rect x="8" y="8" width="14" height="14" fill="#0B1F3A" rx="1"/>
-        <!-- Top-right finder -->
-        <rect x="52" y="2" width="26" height="26" rx="2" fill="none" stroke="#0B1F3A" stroke-width="3"/>
-        <rect x="58" y="8" width="14" height="14" fill="#0B1F3A" rx="1"/>
-        <!-- Bottom-left finder -->
-        <rect x="2" y="52" width="26" height="26" rx="2" fill="none" stroke="#0B1F3A" stroke-width="3"/>
-        <rect x="8" y="58" width="14" height="14" fill="#0B1F3A" rx="1"/>
-        <!-- Data modules -->
-        <rect x="32" y="2" width="6" height="6" fill="#0B1F3A"/>
-        <rect x="40" y="2" width="6" height="6" fill="#0B1F3A"/>
-        <rect x="32" y="10" width="6" height="6" fill="#0B1F3A"/>
-        <rect x="40" y="18" width="6" height="6" fill="#0B1F3A"/>
-        <rect x="46" y="10" width="6" height="6" fill="#0B1F3A"/>
-        <rect x="32" y="32" width="6" height="6" fill="#0B1F3A"/>
-        <rect x="40" y="32" width="6" height="6" fill="#0B1F3A"/>
-        <rect x="48" y="32" width="6" height="6" fill="#0B1F3A"/>
-        <rect x="56" y="32" width="6" height="6" fill="#0B1F3A"/>
-        <rect x="64" y="32" width="6" height="6" fill="#0B1F3A"/>
-        <rect x="72" y="32" width="6" height="6" fill="#0B1F3A"/>
-        <rect x="32" y="40" width="6" height="6" fill="#0B1F3A"/>
-        <rect x="48" y="40" width="6" height="6" fill="#0B1F3A"/>
-        <rect x="64" y="40" width="6" height="6" fill="#0B1F3A"/>
-        <rect x="32" y="48" width="6" height="6" fill="#0B1F3A"/>
-        <rect x="40" y="48" width="6" height="6" fill="#0B1F3A"/>
-        <rect x="56" y="48" width="6" height="6" fill="#0B1F3A"/>
-        <rect x="72" y="48" width="6" height="6" fill="#0B1F3A"/>
-        <rect x="32" y="56" width="6" height="6" fill="#0B1F3A"/>
-        <rect x="48" y="56" width="6" height="6" fill="#0B1F3A"/>
-        <rect x="64" y="56" width="6" height="6" fill="#0B1F3A"/>
-        <rect x="32" y="64" width="6" height="6" fill="#0B1F3A"/>
-        <rect x="40" y="64" width="6" height="6" fill="#0B1F3A"/>
-        <rect x="56" y="64" width="6" height="6" fill="#0B1F3A"/>
-        <rect x="32" y="72" width="6" height="6" fill="#0B1F3A"/>
-        <rect x="48" y="72" width="6" height="6" fill="#0B1F3A"/>
-        <rect x="64" y="72" width="6" height="6" fill="#0B1F3A"/>
-        <rect x="72" y="72" width="6" height="6" fill="#0B1F3A"/>
-        <text x="40" y="42" text-anchor="middle" font-size="6" fill="#0E6B72" font-weight="bold" font-family="sans-serif">SCAN</text>
-      </svg>
+      <div id="qr-code"></div>
     </div>
     <div class="qr-label">Scan for the<br>interactive version</div>
   </div>
@@ -599,7 +545,7 @@
 <!-- CHALLENGES STRIP -->
 <div class="challenges">
   <div class="challenges-label">Common Challenges</div>
-  <div class="challenge-items">
+  <div class="challenge-items" style="width:100%">
     <div class="challenge-item">
       <strong>Data trapped in silos</strong>
       <p>Member info scattered across loan, deposit, and servicing systems no one sees the full picture.</p>
@@ -828,7 +774,7 @@
 <!-- FOOTER -->
 <footer class="footer">
   <div class="footer-signature">
-    <div class="footer-avatar">BD</div>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEcAAAAyCAYAAAAOX8ZtAAAQMklEQVR4nOWbe5RdVX3HP799zrmvufOekGCAkASCEAlEMEoaJSGttqisRTVTHzxVDLQu0Upd0C7WTFAL1IYiqyqWZ4IR1qRWsciqIMkgoGVJUpIYeU4ySUhImOedmfs85+xf/zj3zisTmLwItN+17rpz9j1779/+7d9z798Ik0WbOjRLCMDq56twmi5AzVI0PBu170E1gUgekd0YZyO4j9OdaefaOcX9+o+F0KYG4AC/R1i/3mXxYouInTTNhwmZ1FuVhf1gcz21jdeAXI7IHFwPwhBsCKogAsYBxwG/BOhWkHvZ88aP+Luzs/sxqEUNK0Yttm1fGmtPJgyngYkRBFmS8d1MOa6TJRIAoGoARUSPJCMmwlszp63Nobk5ZNX2v8RL3EaiagaFLJQKClgEQUeNIyiKAoZ4UoinoJB9iVL+q1wx67FhBo1m1AOvXYSRSwjtIowcjxcHMRHTS/kQYzoQ8zhBcD+Xz3huDF1HEW/OnMoC7t9+E6maG/GL4BcDRAxg3np4tSiWeNJFBIq5b3D5zNv40XMey8/1WdWxCDd5K15sIWKgmIfQB1ULKIKAMXgxiCWhkFWENQwMXc81p+1+E1U9IjjwAlvWu2XG/BO1TTeSHwrwixYR9037jYEYRFyKOUuxEFLduJL7t9/A8nN9Vnd+Ey/1G1xvIbnBkGwmJChFqiJiEHEi8VHFL1iG+gKCEsSrLqG25vfc/epSmiWkZb2737SqQkuLoUUNLS0G1cmZj/HUT9ha2ZH7Xr2a2uN+yGCvj6qLyCFNUiZYcRzFWoPyKInUhZTyYG0YMWKy49iAWMJFjE82ezFfmv1L2tSBtbB1itC6OJzQHqkK7e0OXV1Kc3MkmW+B/RfbooZWlNW7T8WRzah1CQNzWIwZITAy2okqKAzZSHEOYVzVENdzME6OUu48rpi9eczvD3TX4BZqsa6H9UvEY/00Tx0a884kVHJ/wiqG7r6Oh0nXX0Q2E5RV6chB9eCkZSJYG5KqdihkN2F1MaILcGOfABZg7cmgtai6gI+YfoTtGOe3II/w+fc8WaZDaEXGeMxRGMscVYOI5b7tZ+PFNhL6kdd5p0JVcVzBhnvxEtOIJ6IQIvAjT4cCEoUWjgduDPwi2HADNrydS0/8MXBAKRq78Pbys5HLSFZJ2Wu8cyEihIHietPwC5bBvoBCLjLsGipqo2+/pBRyIUN9AaWcxTjnkEw/wI93P8GPXnzvgQz7OLVSoQVhVudmYsm5lPI28hjvcKjqQdmuaNMtqRqXoNRPPncpX5z9CC3rXVYsCSqvjSy8pcWAKDNenQ5yShThTjKCPtY4WKMu5RAjNxBgwzqSVb/gno5Ps2JJEHm+CCPMmTs3msD1TsSLx7Fh2bX8H4aIS1CyWF9JVf2Ee19ZGEXvbQ6MsTnLoi+rtTgu8PYleMcUYgxBoICHF3+Q+7bXsXWZovousCdvB0QcCrmAqtqTEP0OK8SyFjOKOWujL8ftI/QBPSzGGQHnMJVSAFfANW+D8TPGYajf4sa+zJpdp9Is4QgDtm6NwmnH7qRUzOM4EoW0hwABGyhh6fA0UxWCgiXIhbwNQYVgrSVZ7eKHfx01jKUmel7VuZlE1fsoZG05A5/8DAIaKGc0xpiZdvnlrvxBb7sQeeeEY7hkdhXTUw53vjTEvlyAOHKoWzYZWLy4oVTYQTF2xtiF/9sGl1YE5SFcL3p5FMGORN+jVcaRse0xA5SUy2ZX8dBHmoaFz5Ho9/HqVulbUaHh8RUeWTqFlefW8+EpceIOOCKYUWMxipaJ2ipjVaZzpXwed2CVN/gFxfVmEC99cCQqjKQmRMSyakeWwGe0K1clUhNHUKsR2+KGsGiHV6lWKToCBvKB0l9WK4HovcpoChIzKOUxy9MEgSIJQ5gLmX9CkqXHJ2l8aBe9vSVIOhBqtLJQwYtWaAOFCj0CxEwUhQQ6QmuZc0GhTL9GaYXEJpBCxRJLOPj+QneYMa2tAq3wwK4fEktcHanUCIM9gZsXNvLJE5PkAuVnO3LctLGfz52W5urTajguYegpWr69uZ9HXx7CNSO7o6Fy7bxavjgnDQp3vDDI3S8NArD8jBquPaMGAZ7tLvKV3/Zw8RnVXH9mHb61/PuSKdywoZ/eQshtCxo4udphc6/P32/oY0evz/J5NZxVH0ME3t8Y46InuogJrFxQz7z6GLlA+Ztne/nd6wVu/lADnzwpRda3fGtThkd25DCeYMcwqGxqDadHB0FrMbS2KrN2tpGuv5p8NqQcAzkGtGj55rxavjwnzdd+18sD27LMSLuoKidUuazbW+Brv+3hhYzPw0uOI5ZyKYbgGYFS1PefP1DPd7cMcOfLQ9y1sJGl05PMa4px53mNfHfrAN/e1E/aNSTjhteHQjwDO7Ih7TtzKMpTF04j4cBtG/s5s85j/Z9PRQTOqPW45rRqZle7/KwjiwJPXTiN02o8bt3Uz4Pbs2wf8LlzUSNXzUnT+vteHnu9wMMXTGFeUwzr67A6RrzRSJzUTHVZi4kOtjpup37qp+jvLiHExokaUxOReer3LSs39kNgkSqXW5/r5/Spcc6u89jQU+QLp6SZXuNSDBWririGb8yt5he7cjy9Jw8ivHR6NV+ek+b2FyLpCayypiPLmj8MQNrl1705+j5Qz+a+Eje1d/HV86cwNWE46YkuShmfdb0+nZ+azvunJ+j3Lb2lkI/+1z4YCrjynDpmVLnU/+cu+jM+AOlql+Vzqrl5S4aN3SU2DQR8/fRqLjuliuv2FjGxcdKjCth4dBS6uvMCEtXXkukOxjMmtCAx4R83ZZhT4/HMx49nwLfcsKGPH2wZ4J4Lmrh0VprfdxVJxSQ6XisnHoGFeMLgGmFBU4J1H5+GErV3FUKe3ZPn+y8OsHpRE6sXNfGDFwf42rN9mGqXefUeqzuyuCmX99Z6vFEI8a0Sr3HpK1lCVWZVubgi9BRs5DBSLqfVeHQXQ/qLlkTaRQNlZrVLqMpnZqb43MwUgYU9uZC9eQtm3JGgUrGBOZe2Noes3hyl9yrj0ykFcITXhwI+9vAeGmo8rjurlu9/qJEtGZ8vnFLNR3+9j8c3ZUgdnyTz2ROjOKdsp4tFiyewtjPL367rgpSBkGGD+pV1XVz7331cPDPF2vOnsG5fkSf3Fkg4huf7SgQCO7IBDTEnOqMfCmhoiuOIsCMXMr8hss8KBKp0ZgMa44aUJ+QGowR755DBEeGmTRnufz4DyVE0xAyhHbdkMYDsdsmdu5RYfAGFITvR6ZwjkUdZeV4jMUdY88IAAyWLovTkQ7KB5Quz05iSZe5xCdyym4w7QlPCQX3L7S8McuO8Ol7PhbzSX2JuY5yfbBvi7MY4l86q4l+3ZsgG0f51F0LOrI+hqryY8SHh8OC2LCvOqmPNh5t4YOsA159bz75CyHO781x9appqTyJp9Qw/3Z7jO2fX0f6xqfzLlgwNKZdHdub48bYhvv/BBuIidBVD5tbHuOfVIfYMBYiRcQfKCshmF+QSXE/xizpRsKaAGOGpvQWue18tn/jT48iH8PnfdPPHN0osa+/ixrPquGNRE7lAufeVIbqzIR2DPj/fmYOYQ8vGfrK+cuWpaRIO9BWVX+3Js6WnhDO7irs/3IQjwi1bMvymM8eK8xrYWwjpyYcYT9g5ELD0sX3cck4dd5zfxMuZgAt+tQ8bKv/TW6JYNhjGQFcuZMmv9nHzOfV8+9x68gG8lPG54sluuj7YwHVn1uAK7MlZHtyWRcomYNilizgU8yHwtHD/tu148ZPxS29+YOTbiFMxE8mx1ShW8TUa2R1px4tuVLBEkRdAyY5EX0EUb5R1oRw5ArkALDzTPJ2eouWiR/fhJg0hjJ3HL/d3JeqvI/NUInRCjdoskd81AkUbtRmJxqj8PSIKlnhKKOS2sr1zvouY6QTBWx4YOeWgzSqIIxhXCBUcL7rwtAriCo5E7YggDsNewI2bYdtgYoZyHIZxy57CKlfOq2XBlDgLpyRY+ti+KGCjHHZ4URxtFZz4CC2mzJTKPFpukzJ94jBscZ3ECA1O3GB1P2NsiSVdirk1rFgSuCiGSVw7h+VXpDxX5Tkc1bUiCMPPo/4e3T7sNjWyi6YsRGc2xJhd7dH8ZBfrXssjMRkef7SrDScai4nbDkRDOL6fquJ6hqH+DIF/D+jBX7kcjZzPKmCErz/TUxatcnpx1EsFxiAgVeOR6fkWX5zTRct6V1jVmUck8XZTMhFGJ4P77ezRhNqAqjqXXOYZkiefD2uheZk1wCu4MRiVgR8rhDryedugGpCocinm92Dcz9CMZesyBVGD8jiuRzlV/f8ERdUnVe0ShnvJD/4Fl574Gm1rh2uGDMauppALDvZQ610LVUU1AISaRg+/tJGBvo9w1Xs3RzefIzU/hstmbcKGD1NVJ+VO726ohqiGoHb4E7UFqIY4rpCuc3FjJbKDK9nbuYhr5r4y0ZWwoCrc13EK8dRmrPWwvrwrbjknhFoSaYMIhMFIEuk4YFzQEIqFHkR+jp+/Y7g6Y3z5XRkyUr316pVUN91LNhOg1rzrGKTWEk8ZSrn1qFiMMy2qKaII8gaO+SPCMwROO5cd/wZQLiDAcoBAL3KelTvi+zqup7rhZvJDEAZBORF95996qg1I1bgUspvpOGn+sBREpwz7L7xNHbaiByo9qWBk4RUJWrXtcrzk94glaskNgLUBlTPwkTPgKFQ7EgVNhwtVn0TKI7Q95PN/wpdmvsx6nOHqU4jUZnG7oWuxsgw72UrUsYurMOiuP5xCsv5GYBmJqiRqo0JGWz4Md9xycWNwtK7ToyoI1JQnGH+FpOXfhXSDoZTfRbb/Yq46fcO4KtNKtnNI2H9lo632gztmo7ELscEilFmorQFCrH0dmIfrNRL4B1/l8GZQBS8O8WRUaFQqjFSXRjC4XlTCGwYQ+D9l8I1ruWb+Ea8unXhRLS2Gua2y30RRgbQgErK685uk629loCdAzJEpi1ONStnyg4+BPI0b/yyhP4d40sE4EeOiyqx9GNOO1bu49IQnhmk7wtXtb77jLWpYjKELHbHqKrRh6N5ZQxUv4HlT8IscAe+miIkKIYuF93PlzOdZry5d3bPxSydjtRa1JWLubvLFV7hyZv8wja1Hp6L9INVBBURHGe+/oqrhIbL9PuAdFiVqfWqneGS6VnLFrOv43svx4f+bmAiV8tqjWMV+6LaiwqB7O75Hw9SvkunyUQ6tVlmtT3Wjx1BfOyfN+DO6KHsVoAVhLsLWdmHuYoW1sGzZpD3O4eAwDGlZvZolZNX2u6hu+hKDPYq1FmMmV0arGu16TZNDrv8psqVPsnzWQDmyPeaJ8GHYCYnsUIsaLp95FYO9N+DGQqrrI8ZU8pso0Rv5QCXXgWTaIVXjkMvcjf/qR1k+O0NL68SB2zHAkXDBQotGhc53vzyfVPU/YMNPEEvECYPI3Y6GKdcE+wUQ8xRB8RYun/kocOCI9hjhyMUno2OMn7w2H2s+DfYCbHgCastXAwbE6cGRpwn1P4bdcFubQ/OyA+Y4xwr/C29A4A6f4h0jAAAAAElFTkSuQmCC" alt="Salesforce" class="footer-avatar">
     <div>
       <div class="footer-name">Ben DiNapoli</div>
       <div class="footer-title">Data Foundations (MuleSoft &amp; Informatica), Financial Services · Salesforce</div>
@@ -847,5 +793,16 @@
   </div>
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script>
+  new QRCode(document.getElementById("qr-code"), {
+    text: "https://bdinapoli.github.io/data-foundations-credit-union-stories/",
+    width: 80,
+    height: 80,
+    colorDark: "#0B1F3A",
+    colorLight: "#ffffff",
+    correctLevel: QRCode.CorrectLevel.M
+  });
+</script>
 </body>
 </html>
