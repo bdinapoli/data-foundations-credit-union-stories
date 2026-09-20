@@ -433,50 +433,51 @@
 
   /* ── PRINT ── */
   @media print {
-    @page { size: letter; margin: 0.25in 0.3in; }
+    @page { size: letter; margin: 0.15in 0.25in; }
 
     * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
 
-    body { font-size: 9.5px; line-height: 1.45; }
+    body { font-size: 9px; line-height: 1.38; }
 
-    .header { padding: 14px 24px 12px; }
-    .header-title { font-size: 17px; }
-    .header-sub { font-size: 10.5px; margin-top: 7px; }
-    .qr-box { width: 70px; height: 70px; }
-    .qr-box svg { width: 60px; height: 60px; }
+    .header { padding: 10px 20px 9px; gap: 16px; }
+    .header-title { font-size: 15px; }
+    .header-sub { font-size: 9.5px; margin-top: 5px; line-height: 1.45; }
+    .qr-box { width: 62px; height: 62px; }
+    .qr-box svg, .qr-box img, .qr-box canvas { width: 54px !important; height: 54px !important; }
 
-    .challenges { padding: 10px 24px; }
-    .challenge-item strong { font-size: 10px; }
-    .challenge-item p { font-size: 9.5px; }
+    .challenges { padding: 7px 20px; }
+    .challenges-label { font-size: 8.5px; margin-bottom: 5px; }
+    .challenge-item strong { font-size: 9px; }
+    .challenge-item p { font-size: 8.5px; line-height: 1.35; }
 
-    .df-banner { padding: 7px 24px; }
-    .df-banner-text { font-size: 9.5px; }
+    .df-banner { padding: 5px 20px; }
+    .df-banner-text { font-size: 9px; }
 
-    .main { padding: 0 24px 14px; }
-    .section-header { padding: 14px 0 10px; margin-bottom: 12px; }
-    .section-title { font-size: 13px; }
+    .main { padding: 0 20px 8px; }
+    .section-header { padding: 8px 0 6px; margin-bottom: 7px; }
+    .section-title { font-size: 11px; }
 
-    .stories-grid { gap: 10px; }
-    .df-row { gap: 10px; }
+    .stories-grid { gap: 7px; }
+    .df-row { gap: 7px; }
 
-    .story-card-body { padding: 10px 12px; }
-    .story-name { font-size: 11px; }
-    .story-detail { font-size: 9px; }
-    .story-challenge { font-size: 9.5px; margin-bottom: 8px; line-height: 1.4; }
-    .story-metrics { gap: 8px; margin-bottom: 8px; }
-    .metric-value { font-size: 16px; }
-    .metric-label { font-size: 8.5px; max-width: 72px; }
-    .story-quote { font-size: 9px; padding: 6px 10px; line-height: 1.4; }
-    .story-quote cite { font-size: 8.5px; }
-    .df-badge { font-size: 7.5px; padding: 1px 6px; }
+    .story-card-body { padding: 7px 9px; }
+    .story-name { font-size: 10px; }
+    .story-detail { font-size: 8px; }
+    .story-challenge { font-size: 8.5px; margin-bottom: 5px; line-height: 1.35; }
+    .story-metrics { gap: 6px; margin-bottom: 5px; }
+    .metric-value { font-size: 14px; }
+    .metric-label { font-size: 7.5px; max-width: 68px; }
+    .story-quote { font-size: 8px; padding: 4px 8px; line-height: 1.35; }
+    .story-quote cite { font-size: 7.5px; }
+    .df-badge { font-size: 7px; padding: 1px 5px; }
 
-    .footer { padding: 10px 24px; }
-    .footer-avatar { height: 28px; }
-    .footer-name { font-size: 10.5px; }
-    .footer-title { font-size: 9px; }
-    .footer-contact { font-size: 9px; gap: 7px; }
-    .footer-cta-text { font-size: 9px; }
-    .footer-cta-link { font-size: 10px; padding: 5px 12px; }
+    .footer { padding: 7px 20px; }
+    .footer-avatar { height: 24px; }
+    .footer-name { font-size: 9.5px; }
+    .footer-title { font-size: 8px; }
+    .footer-contact { font-size: 8px; gap: 5px; }
+    .footer-cta-text { font-size: 8px; }
+    .footer-cta-link { font-size: 9px; padding: 4px 10px; }
 
     a { text-decoration: none; }
   }
